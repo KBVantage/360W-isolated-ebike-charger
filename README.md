@@ -162,6 +162,8 @@ Relay control to connect the battery to the charging schematic.
 
 ## PCB Layout
 
+The PCB layout maintains 3 mm clearance between neutral and live conductors on the primary side, and 6 mm clearance between primary and secondary domains to support the required isolation barrier and reduce risk of electrical breakdown.
+The PCB layout was developed with a strong focus on power integrity, EMI control, and safety isolation. High-frequency switching loops were kept as compact as possible, while sensitive measurement, control, and communication traces were routed away from noisy power nodes. The primary and secondary sections were physically separated to support the isolation barrier, with creepage and clearance considered throughout the board layout and transformer interface. Thermal performance was addressed by spreading losses across the board, using copper for heat dissipation, and positioning major power devices to simplify cooling and reduce local hot spots
 <img width="1184" height="898" alt="image" src="https://github.com/user-attachments/assets/c2f2dff8-50dc-433c-8118-ca4cfe7cd2cf" />
 
 
@@ -171,8 +173,7 @@ Relay control to connect the battery to the charging schematic.
 
 ```
 
-The PCB layout maintains 3 mm clearance between neutral and live conductors on the primary side, and 6 mm clearance between primary and secondary domains to support the required isolation barrier and reduce risk of electrical breakdown.
-The PCB layout was developed with a strong focus on power integrity, EMI control, and safety isolation. High-frequency switching loops were kept as compact as possible, while sensitive measurement, control, and communication traces were routed away from noisy power nodes. The primary and secondary sections were physically separated to support the isolation barrier, with creepage and clearance considered throughout the board layout and transformer interface. Thermal performance was addressed by spreading losses across the board, using copper for heat dissipation, and positioning major power devices to simplify cooling and reduce local hot spots
+
 ---
 
 ## 3D and Mechanical Design
