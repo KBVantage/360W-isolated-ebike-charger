@@ -3,6 +3,8 @@
 A high-efficiency isolated AC-DC charger designed for a 24V 100Ah LiFePO4 battery pack used in e-bike applications.  
 The charger accepts universal single-phase AC input from 110–230 Vrms, performs EMC filtering and rectification, converts the power through an LLC resonant stage, and regulates battery charging using CC/CV control coordinated with the BMS.
 
+<img width="1533" height="678" alt="image" src="https://github.com/user-attachments/assets/bf468802-4845-4ba2-988b-6fb6fd7760fc" />
+
 The design achieves up to 24V at 15A peak output current with approximately 94% efficiency at the operating point.  
 The control and monitoring architecture uses an STM32L0 microcontroller, while Python scripts were used to support test automation and measurement analysis.  
 Design capture was done in Altium Designer, circuit verification was supported with LTspice, and firmware development used STM IDE.
@@ -65,7 +67,6 @@ This structure is intended to show not only the final design, but also the reaso
 ---
 
 ## System Architecture
-<img width="1533" height="678" alt="image" src="https://github.com/user-attachments/assets/bf468802-4845-4ba2-988b-6fb6fd7760fc" />
 
 The charger begins with the AC input stage, where EMI and common-mode filtering reduce noise before the line is protected by a fuse and rectified by a bridge diode stage.  
 The rectified DC bus is smoothed with bulk capacitance and then processed by the LLC resonant converter, which provides efficient isolated power transfer at 360W.  
@@ -138,13 +139,13 @@ This section can explain how the simulated waveforms were used to verify resonan
 <img width="1911" height="979" alt="screenshot" src="https://github.com/user-attachments/assets/43e456e0-aff1-47d0-a062-24725d361098" />
 <img width="1455" height="807" alt="screenshot 2" src="https://github.com/user-attachments/assets/d13b5095-8a50-40c9-a1dc-ddd3993b9816" />
 
-Input - CM filter - bridge rectifer - boost PFC Schematic
+Input - CM filter - bridge rectifier - boost PFC Schematic
 <img width="853" height="444" alt="image" src="https://github.com/user-attachments/assets/3768928a-78ef-458e-98e5-13d22484c92a" />
 
 LLC converter - SR rectifier Schematic
 <img width="807" height="497" alt="image" src="https://github.com/user-attachments/assets/0643c8d4-c518-4814-a7f3-5ed1d5aea02b" />
 
-Relay control to connect the battery to charging Schemtic.
+Relay control to connect the battery to the charging schematic.
 <img width="676" height="379" alt="image" src="https://github.com/user-attachments/assets/57793c25-3681-4c85-a1cb-ea4753f73185" />
 
 
@@ -177,7 +178,6 @@ The PCB layout was developed with a strong focus on power integrity, EMI control
 ## 3D and Mechanical Design
 
 
-3D view
 <img width="1359" height="648" alt="image" src="https://github.com/user-attachments/assets/5e2e2748-df9c-4726-a15b-ff69fd012288" />
 
 ```md
@@ -189,9 +189,10 @@ The PCB layout was developed with a strong focus on power integrity, EMI control
 
 ## Thermal Results
 Thermal measurements were taken to identify hotspots across the primary switches, transformer, synchronous rectifier, and auxiliary power components during load testing. The results provide direct feedback on loss distribution and help verify that the layout and cooling strategy are suitable for continuous operation, while also pointing to opportunities for optimization in the next hardware revision.
+Vout 24V Iout 5A, 25C ambient
 
 <img width="440" height="333" alt="image" src="https://github.com/user-attachments/assets/42ee4961-4bf2-47f1-92dd-9c7239dc289f" />
-Vout 24V Iout 5A, 25C ambient
+
 ```md
 
 
