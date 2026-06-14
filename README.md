@@ -98,7 +98,7 @@ This is especially useful in a 24V, 15A charger where secondary conduction losse
 ### Control and sensing
 The STM32L0 was selected for its low-power operation, compact integration, and flexible peripheral set.  
 It supports the measurement, sequencing, communication, and supervisory logic needed for a charger platform.  
-Its ultra-low-power characteristics also make it suitable for auxiliary management and standby behavior [web:117][web:123].
+Its ultra-low-power characteristics also make it suitable for auxiliary management and standby behavior.
 
 ---
 
